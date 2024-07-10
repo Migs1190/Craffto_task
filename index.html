@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <title>Task-Focal</title>
+</head>
+
+<body>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="index.js"></script>
+
+  <nav class="bg-stone-900 fixed z-10 w-full">
+    <div class="flex justify-between items-center px-10 py-7">
+      <div class="block lg:hidden flex justify-between w-[56px] text-white">
+        <a href="#">
+          <svg focusable="false" width="18" height="14" class="icon icon--header-hamburger" viewBox="0 0 18 14">
+            <path d="M0 1h18M0 13h18H0zm0-6h18H0z" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </a>
+        <a href="#">
+          <svg focusable="false" width="18" height="18" class="icon icon--header-search" viewBox="0 0 18 18">
+            <path
+              d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"
+              fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="nav-logo">
+        <img class="w-[96px]"
+          src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/logo-focal.png?v=1630492228&width=200"
+          alt="Focal-logo" />
+      </div>
+
+      <div class="block lg:hidden relative">
+        <a href="#cart" class="text-white">
+          <svg focusable="false" width="20" height="18" class="icon icon--header-cart" viewBox="0 0 20 18">
+            <path d="M3 1h14l1 16H2L3 1z" fill="none" stroke="currentColor" stroke-width="2"></path>
+            <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+          <div
+            class="w-[21px] h-[21px] bg-white text-stone-900 text-[9px]/[21px] text-center rounded-full absolute -top-2 left-3">
+            0
+          </div>
+        </a>
+      </div>
+
+      <ul class="hidden lg:flex flex justify-between gap-5 text-white">
+        <li><a href="#sbc" class="dynamic-underline">Shop by Category</a></li>
+        <li><a href="#sbd" class="dynamic-underline">Shop by device</a></li>
+        <li>
+          <a href="#collections" class="dynamic-underline">Collections</a>
+        </li>
+        <li><a href="#blog" class="dynamic-underline">Blog</a></li>
+      </ul>
+
+      <ul class="hidden lg:flex flex justify-between gap-3 text-white">
+        <li>
+          <a href="#notifications">
+            <svg focusable="false" width="20" height="16" class="icon icon--header-email" viewBox="0 0 20 16">
+              <path d="M19 4l-9 5-9-5" fill="none" stroke="currentColor" stroke-width="2"></path>
+              <path stroke="currentColor" fill="none" stroke-width="2" d="M1 1h18v14H1z"></path>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#search">
+            <svg focusable="false" width="18" height="18" class="icon icon--header-search" viewBox="0 0 18 18">
+              <path
+                d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"
+                fill="none" stroke="currentColor" stroke-width="2"></path>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#account">
+            <svg focusable="false" width="18" height="17" class="icon icon--header-customer" viewBox="0 0 18 17">
+              <circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+              </circle>
+              <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="relative">
+          <a href="#cart">
+            <svg focusable="false" width="20" height="18" class="icon icon--header-cart" viewBox="0 0 20 18">
+              <path d="M3 1h14l1 16H2L3 1z" fill="none" stroke="currentColor" stroke-width="2"></path>
+              <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+            </svg>
+            <div
+              class="w-[21px] h-[21px] bg-white text-stone-900 text-[9px]/[21px] text-center rounded-full absolute -top-2 left-3">
+              0
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <header>
+    <div class=" swiper mySwiper cursor-grab h-[614px] overflow-hidden">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide slide-image px-[74px] py-[200px] bg-[url('https://focal-theme-carbon.myshopify.com/cdn/shop/files/heritage-lp-3.jpg?v=1630492874&width=2000')] bg-cover">
+          <div class="slide-content text-white">
+            <div class="heading-wrapper mb-[64px]">
+              <div class="heading-letters h-[16px] text-[13px] mb-4">PREMIUM COLLECTION</div>
+              <div class="heading-letters h-[64px] text-[64px]">THE HERITAGE</div>
+              <div class="heading-letters h-[64px] text-[64px]">COLLECTION</div>
+            </div>
+            <div class="btn-group-wrapper">
+              <button><span>LEARN MORE</span></button>
+              <button><span>SHOP</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="flex justify-center items-center w-full h-full">
+            <div
+              class="slide-image w-full lg:w-1/2 h-full bg-[url('https://focal-theme-carbon.myshopify.com/cdn/shop/files/sage1-desktop.jpg?v=1630492840&width=1200')] bg-cover">
+            </div>
+            <div
+              class="slide-image w-0 lg:w-1/2 h-full bg-[url('https://focal-theme-carbon.myshopify.com/cdn/shop/files/sage2-desktop.jpg?v=1630492847&width=1000')] bg-cover">
+            </div>
+            <div class="slide-content absolute text-white text-center">
+              <div class="heading-wrapper mb-[64px]">
+                <div class="heading-letters h-[16px] text-[13px] mb-4">MEET THE</div>
+                <div class="heading-letters h-[64px] text-[64px]">SAGE COLLECTION</div>
+              </div>
+              <div class="btn-group-wrapper">
+                <button><span>LEARN MORE</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide slide-image px-[74px] py-[200px] bg-[url('https://focal-theme-carbon.myshopify.com/cdn/shop/files/tom-dixon-lp-tile-1.jpg?v=1630492908&width=2000')] bg-cover">
+          <div class="slide-content absolute text-white">
+            <div class="heading-wrapper mb-[64px]">
+              <div class="heading-letters h-[16px] text-[13px] mb-4">COLLABORATION</div>
+              <div class="heading-letters h-[64px] text-[64px]">NATIVE UNION X TOM DIXON</div>
+            </div>
+            <div class="btn-group-wrapper">
+              <button><span>LEARN MORE</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="flex justify-center items-center w-full h-full">
+            <div
+              class="slide-image w-full lg:w-1/2 h-full bg-[url('https://focal-theme-carbon.myshopify.com/cdn/shop/files/jump1-desktop.jpg?v=1630492933&width=1200')] bg-cover">
+            </div>
+            <div
+              class="slide-image w-0 lg:w-1/2 h-full bg-[url('https://focal-theme-carbon.myshopify.com/cdn/shop/files/jump2-desktop.jpg?v=1630492956&width=1000')] bg-cover">
+            </div>
+            <div class="slide-content absolute text-white text-center">
+              <div class="heading-wrapper mb-[64px]">
+                <div class="heading-letters h-[16px] text-[13px] mb-4">CHANGE ANYWHERE, ANYTIME</div>
+                <div class="heading-letters h-[64px] text-[64px]">NEW JUMP+</div>
+                <div class="heading-letters h-[64px] text-[64px]">POWERBANK</div>
+              </div>
+              <div class="btn-group-wrapper">
+                <button><span>SHOP JUMP+</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide slide-image bg-[url('https://focal-theme-carbon.myshopify.com/cdn/shop/files/mk-lp-tile-1.jpg?v=1630493139&width=2000')] bg-cover">
+          <div class="slide-content px-[74px] py-[200px] absolute text-white">
+            <div class="heading-wrapper mb-[64px]">
+              <div class="heading-letters h-[16px] text-[13px] mb-4">NEW IN</div>
+              <div class="heading-letters h-[64px] text-[64px]">THE MAISON</div>
+              <div class="heading-letters h-[64px] text-[64px]">KITSUNÉ COLLAB</div>
+            </div>
+            <div class="btn-group-wrapper">
+              <button><span>LEARN MORE</span></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination flex justify-center mb-[30px]"></div>
+    </div>
+  </header>
+
+  </script>
+</body>
+
+</html>
